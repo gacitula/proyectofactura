@@ -1,0 +1,15 @@
+<ul class="nav nav-tabs">
+  <% if usuario_signed_in? %>
+  <a class="navbar-brand navbar-right" href="<%= edit_usuario_registration_path(current_usuario) %>">Editar Perfil</a>
+  <a class="navbar-brand navbar-right"data-method="delete", href="<%= destroy_usuario_session_path %>" >Cerrar Sesion</a></li>
+  <li><a href="<%= root_path %>">Inicio</a></li>
+  <li><a href="<%= clientes_path %>">Clientes</a></li>
+  <li><a href="<%= facturas_path %>">Facturas</a></li>
+  <li><a href="<%= categoria_path %>">Categorias</a></li>
+  <li><a href="<%= productos_path %>">Productos</a></li>
+  <li><a href="<%= detalle_facturas_path %>">Detalles Factura</a></li>
+  <% else %>
+  <li><a href="<%= new_usuario_session_path %>">Ingresar</a></li>
+  <li><a href="<%= new_usuario_registration_path %>">Registrarse</a></li>
+  <% end %>
+</ul>

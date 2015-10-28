@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  Idproducto: 1
+  nombreproducto: MyString
+  stock: 1
+  Idcategoria: MyString
+
+two:
+  Idproducto: 1
+  nombreproducto: MyString
+  stock: 1
+  Idcategoria: MyString

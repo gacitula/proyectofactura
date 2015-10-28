@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  Idcategoria: 1
+  nombrecategoria: MyString
+  descripcion: MyString
+  producto_id: 
+
+two:
+  Idcategoria: 1
+  nombrecategoria: MyString
+  descripcion: MyString
+  producto_id: 

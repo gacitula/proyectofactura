@@ -1,0 +1,27 @@
+<h1>Detalle Facturas</h1>
+
+<table class="table table-bordered">
+  <thead>
+    <tr>
+      <th>Factura</th>
+      <th>Producto</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @detalle_facturas.each do |detalle_factura| %>
+      <tr>
+        <td><%= detalle_factura.factura_id %></td>
+        <td><%= detalle_factura.producto_id %></td>
+        <td><%= link_to 'Ver', detalle_factura %></td>
+        <td><%= link_to 'Editar', edit_detalle_factura_path(detalle_factura) %></td>
+        <td><%= link_to 'Eliminar', detalle_factura, method: :delete, data: { confirm: 'Estas seguro?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'Nuevo Detalle factura', new_detalle_factura_path %>

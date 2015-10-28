@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Idfactura:</strong>
+  <%= @factura.Idfactura %>
+</p>
+
+<p>
+  <strong>Rutcliente:</strong>
+  <%= @factura.rutcliente %>
+</p>
+
+<p>
+  <strong>Fecha:</strong>
+  <%= @factura.fecha %>
+</p>
+
+<p>
+  <strong>Cliente:</strong>
+  <%= @factura.cliente.nombrecliente %>
+</p>
+
+<h2>Producto</h2>
+<% @productos.each do |producto| %>
+  <strong>Id Producto:</strong>
+ <%= producto.Idproducto %>
+ <strong>Nombre del Producto:</strong>
+ <%= producto.nombreproducto %>
+ <br>
+
+ <% end %>
+
+<%= link_to 'Editar', edit_factura_path(@factura) %> |
+<%= link_to 'Atras', facturas_path %>

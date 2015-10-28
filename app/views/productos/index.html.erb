@@ -1,0 +1,31 @@
+<h1>Productos</h1>
+
+<table class="table table-bordered">
+  <thead>
+    <tr>
+      <th>Id Producto</th>
+      <th>Nombre Producto</th>
+      <th>Stock</th>
+      <th>Id Categoria</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @productos.each do |producto| %>
+      <tr>
+        <td><%= producto.Idproducto %></td>
+        <td><%= producto.nombreproducto %></td>
+        <td><%= producto.stock %></td>
+        <td><%= producto.Idcategoria %></td>
+        <td><%= link_to 'Ver', producto %></td>
+        <td><%= link_to 'Editar', edit_producto_path(producto) %></td>
+        <td><%= link_to 'Eliminar', producto, method: :delete, data: { confirm: 'Estas seguro?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'Nuevo Producto', new_producto_path %>
