@@ -13,11 +13,11 @@
 
   <div class="field">
     <%= f.label :factura_id %><br>
-    <%= f.text_field :factura_id %>
+    <%= f.select( "factura_id",Factura.all.collect{|l| [l.Idfactura, l.id ] }, {include_blank: 'Selecciona Factura'}) %>​
   </div>
   <div class="field">
     <%= f.label :producto_id %><br>
-    <%= f.text_field :producto_id %>
+    <%= f.select( "producto_id",Producto.all.collect{|l| [l.nombreproducto, l.id ] }, {include_blank: 'Selecciona Producto'}) %>​
   </div>
   <div class="actions">
     <%= f.submit %>

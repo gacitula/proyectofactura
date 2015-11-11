@@ -17,7 +17,7 @@
   </div>
   <div class="field">
     <%= f.label :rutcliente %><br>
-    <%= f.text_field :rutcliente %>
+    <%= f.select( "cliente_id",Cliente.all.collect{|l| [l.rutcliente, l.id ] }, {include_blank: 'Selecciona Rut del Cliente'}) %>​
   </div>
   <div class="field">
     <%= f.label :fecha %><br>
@@ -25,7 +25,7 @@
   </div>
   <div class="field">
     <%= f.label :cliente_id %><br>
-    <%= f.text_field :cliente_id %>
+    ​<%= f.select( "cliente_id",Cliente.all.collect{|l| [l.nombrecliente, l.id ] }, {include_blank: 'Selecciona Cliente'}) %>​
   </div>
   <div class="actions">
     <%= f.submit %>
